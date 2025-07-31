@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>COVID-19 Waves in US</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      text-align: center;
+    }
+
+    #vis {
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    #navButtons {
+      text-align: center;
+      margin-top: 10px;
+      /* increased from 30px to 60px */
+    }
+
+
+    button {
+      margin: 10px 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    #stateDropdown {
+      display: none;
+      margin-bottom: 20px;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+
+    svg {
+      display: block;
+      margin: auto;
+    }
+
+    .tooltip {
+      position: absolute;
+      padding: 6px 10px;
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      font-size: 12px;
+      border-radius: 4px;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>COVID-19 Waves in US</h1>
+
+  <select id="stateDropdown"></select>
+
+  <div id="vis"></div>
+  <div id="tooltip" class="tooltip"></div>
+
+
+  <div id="navButtons">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+  </div>
+  
+
+  <script src="main.js"></script>
+</body>
+
+</html>
